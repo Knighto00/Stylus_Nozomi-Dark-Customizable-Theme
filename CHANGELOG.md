@@ -2,7 +2,7 @@
 
 ## 1.1.2
 
--	Set mirror to codeberg repository.
+-	Set mirror to github repository.
 - Style's name and description modified.
 
 ## 1.1.0
