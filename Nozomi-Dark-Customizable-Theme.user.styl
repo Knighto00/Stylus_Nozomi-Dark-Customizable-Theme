@@ -2,236 +2,306 @@
 @name           Nozomi Dark/Customizable Theme
 @namespace      github.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme
 @description    A modest dark/customizable theme for nozomi.la website. You are able to set the colors you like the most and adapt it to OLED screen = Less battery consumption.
-@author			Knighto00 ->> (https://github.com/Knighto00)
-@homepageURL	https://github.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme
-@supportURL		https://github.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme/issues
-@version        1.1.2
-@license		GNU GPLv3
-@preprocessor	stylus
+@author         Knighto00 ->> (https://github.com/Knighto00)
+@homepageURL    https://github.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme
+@supportURL     https://github.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme/issues
+@version        1.2.0
+@license        GNU GPLv3
+@preprocessor   stylus
 
-@var checkbox bannerDisable 		"Disable banner image" 									1
+@var checkbox bannerDisable         "Disable banner image"                                  1
+@var checkbox pureBlack             "Enable pure black/OLED theme"                          0
 
-@var color    searchInput   		"Search input text color"   	  	 					#5ebf00
-@var color    searchSuggest 		"Search suggestions text color"   	 					#5ebf00
-@var color    searchSugTotal		"Total number of itens text color"  					#cccccc
+@var color    pureBlackColor        "Pure black color"                                      #000000
+@var color    pureBlackBordersColor "Pure black borders color"                              #1c1c1c
 
-@var color    artistTags            "Artist tag color"                                      #E06F0B
-@var color    characterTags         "Character tag color"                                   #44aa44
-@var color    circleTags            "Circle tag color"                                      #00AAFF
-@var color    copyrightTags         "Copyright tag color"                                   #B319FF
-@var color    generalTags   		"General tag color"   			     					#cccccc
-@var color    nullTags   		    "Null tag color"                                        #007bff
-@var color    styleTags   		    "Style tag color"   			     					#0090D9
+@var color    searchInput           "Search input text color"                               #5ebf00
+@var color    searchSuggest         "Search suggestions text color"                         #5ebf00
+@var color    searchSugTotal        "Total number of itens text color"                      #cccccc
+
+@var color    artistTags            "Artist tags color"                                     #E06F0B
+@var color    characterTags         "Character tags color"                                  #44aa44
+@var color    circleTags            "Circle tags color"                                     #00AAFF
+@var color    copyrightTags         "Copyright tags color"                                  #B319FF
+@var color    deprecatedTags        "Deprecated tags color"                                 #e0e000
+@var color    generalTags           "General tags color"                                    #cccccc
+@var color    nullTags              "Null tags color"                                       #007bff
+@var color    styleTags             "Style tags color"                                      #0090D9
 @var color    tagsColorOnHover      "Tags color on hover"                                   #6ad900
 
-@var color    searchButtonColor 	"Search button color"   			 					#5ebf00
-@var color    searchButtonBkg   	"Search button background color"   	 					#242424
-@var color    searchButtonHColor	"Search button color on hover"       					#6ad900
-@var color    searchButtonHBkg  	"Search button background color on hover"   			#403f3f
+@var color    searchButtonColor     "Search button color"                                   #5ebf00
+@var color    searchButtonBkg       "Search button background color"                        #242424
+@var color    searchButtonHColor    "Search button color on hover"                          #6ad900
+@var color    searchButtonHBkg      "Search button background color on hover"               #403f3f
 
-@var color    h1Title  				"Page title text color"   							    #5ebf00
-@var color    sidebarTitles			"Sidebar title text color"								#5ebf00
-@var color 	  orderByText			'"Order by" text color'									#cccccc
-@var color 	  orderByCat			'"Order by" tag text color'								#ff1b1b
-@var color 	  orderByCatH			'"Order by" tag text color on hover'					#5ebf00
+@var color    h1Title               "Page title text color"                                 #5ebf00
+@var color    sidebarTitles         "Sidebar title text color"                              #5ebf00
+@var color    orderByText           '"Order by" text color'                                 #cccccc
+@var color    orderByCat            '"Order by" tag text color'                             #ff1b1b
+@var color    orderByCatH           '"Order by" tag text color on hover'                    #5ebf00
 
-@var color    indexNumber      		"Selected page number color"   							#5ebf00
-@var color    nextIndexNumber  		"Next/Previous page number color"           			#bdbdbd
-@var color 	  nextIndexNumberH		"Next/Previous page number color on hover"  			#fbfbfb
-@var color 	  nextIndexNumberBH		"Next/Previous page number background color on hover"   #403f3f
+@var color    indexNumber           "Selected page number color"                            #5ebf00
+@var color    nextIndexNumber       "Next/Previous page number color"                       #bdbdbd
+@var color    nextIndexNumberH      "Next/Previous page number color on hover"              #fbfbfb
+@var color    nextIndexNumberBH     "Next/Previous page number background color on hover"   #403f3f
 
-@var color    bkgColor  			"Background Color"    			     					#242424
-@var color    bordersColor  		"Borders Color"    	  			     					#373737
+@var color    bkgColor              "Background Color"                                      #242424
+@var color    bordersColor          "Borders Color"                                         #373737
 ==/UserStyle== */
-
 @-moz-document domain("nozomi.la") {
 
-	body {
-		background-color: bkgColor !important;
-	}
+    body {
+        background-color: bkgColor !important;
+    }
 
+    .container {
+        border-left: 1px solid bordersColor !important;
+        border-right: 1px solid bordersColor !important;
+        border-bottom: 1px solid bordersColor !important;
+        -moz-box-shadow: 0 0 10px bordersColor !important;
+        -webkit-box-shadow: 0 0 10px bordersColor !important;
+        box-shadow: 0 0 10px bordersColor !important;
+        background-color: bkgColor !important;
+    }
 
-	.container {
-		border-left: 1px solid bordersColor !important;
-		border-right: 1px solid bordersColor !important;
-		border-bottom: 1px solid bordersColor !important;
-		-moz-box-shadow: 0 0 10px bordersColor !important;
-		-webkit-box-shadow: 0 0 10px bordersColor !important;
-		box-shadow: 0 0 10px bordersColor !important;
-		background-color: bkgColor !important;
-	}
+    /* Banner/logo/navbar ~ Starts*/
+    .navbar {
+        border-bottom: 1px solid bordersColor !important;
+    }
 
+    if bannerDisable {
+        .navbar {
+            background-image: none !important;
+            background-color: bkgColor !important;
+        }
+    }
+    /* Banner/logo/navbar ~ Ends*/
+    	
+    /* Search Form ~ Starts*/
+    .search-input #query-input {
+        background-color: bkgColor !important;
+        color: searchInput !important;
+    }
 
-	/* Banner/logo/navbar ~ Starts*/
-	.navbar {
-		border-bottom: 1px solid bordersColor !important;
-	}
+    #search-suggestions li {
+        background-color: bkgColor !important;
+    }
 
-	if bannerDisable {
-		.navbar {
-			background-image: none !important;
-			background-color: bkgColor !important;
-		}
-	}
-	/* Banner/logo/navbar ~ Ends*/
+    #search-suggestions li a {
+        color: searchSuggest !important;
+    }
 
+    .search-suggestion_total {
+        color: searchSugTotal !important;
+    }
 
-	/* Search Form ~ Starts*/
-	.search-input #query-input {
-		background-color: bkgColor !important;
-		color: searchInput !important;
-	}
-
-	#search-suggestions li {
-		background-color: bkgColor !important;
-	}
-
-	#search-suggestions li a {
-		color: searchSuggest !important;
-	}
-
-	.search-suggestion_total {
-		color: searchSugTotal !important;
-	}
-
-	.search-suggestion strong {
-		color: searchSuggest !important;
-	}
-	/* Search Form ~ Ends*/
-
-
-	/* Search Button ~ Starts*/
-	#search-button {
-		background-color: searchButtonBkg !important;
-		color: searchButtonColor !important;
-		border: 1px solid bordersColor !important;
-	}
-	#search-button:hover {
-		background-color: searchButtonHBkg !important;
-		color: searchButtonHColor !important;
-	}
-	/* Search Button ~ Ends*/
-
-
-	/* Sidebar/Tags session ~ Starts*/
-	.sidebar {
-		background-color: bkgColor !important;
-		border-right: 1px solid bordersColor !important;
-		border-bottom: 1px solid bordersColor !important;
-	}
+    .search-suggestion strong {
+        color: searchSuggest !important;
+    }
+    /* Search Form ~ Ends*/
+    	
+    /* Search Button ~ Starts*/
+    #search-button {
+        background-color: searchButtonBkg !important;
+        color: searchButtonColor !important;
+        border: 1px solid bordersColor !important;
+    }
+    #search-button:hover {
+        background-color: searchButtonHBkg !important;
+        color: searchButtonHColor !important;
+    }
+    /* Search Button ~ Ends*/
+    	
+    /* Sidebar/Tags session ~ Starts*/
+    .sidebar {
+        background-color: bkgColor !important;
+        border-right: 1px solid bordersColor !important;
+        border-bottom: 1px solid bordersColor !important;
+    }
 
     .sidebar li a:hover {
         color: tagsColorOnHover !important;
     }
 
-	.sidebar .title {
-		color: sidebarTitles !important;
-	}
+    .sidebar .title {
+        color: sidebarTitles !important;
+    }
 
     .sidebar .artist {
-		color: artistTags !important;
-	}
+        color: artistTags !important;
+    }
 
     .sidebar .character {
-		color: characterTags !important;
-	}
+        color: characterTags !important;
+    }
 
     .sidebar .circle {
-		color: circleTags !important;
-	}
+        color: circleTags !important;
+    }
 
     .sidebar .copyright {
-		color: copyrightTags !important;
-	}
+        color: copyrightTags !important;
+    }
 
-	.sidebar .general {
-		color: generalTags !important;
-	}
+    .sidebar .deprecated {
+        color: deprecatedTags !important;
+    }
+
+    .sidebar .general {
+        color: generalTags !important;
+    }
 
     .sidebar .null {
-		color: nullTags !important;
-	}
+        color: nullTags !important;
+    }
 
     .sidebar .style {
-		color: styleTags !important;
-	}
-	/* Sidebar/Tags session ~ Ends*/
+        color: styleTags !important;
+    }
+    /* Sidebar/Tags session ~ Ends*/
+    	
+    /* Main content ~ Starts*/
+    .content {
+        background-color: bkgColor !important;
+    }
 
+    h1 {
+        background-color: bkgColor !important;
+        border-top: 1px solid bordersColor !important;
+        border-bottom: 1px solid bordersColor !important;
+        color: h1Title !important;
+    }
 
-	/* Main content ~ Starts*/
-	.content {
-		background-color: bkgColor !important;
-	}
+    h3 {
+        color: orderByText !important;
+    }
 
-	h1 {
-		background-color: bkgColor !important;
-		border-top: 1px solid bordersColor !important;
-		border-bottom: 1px solid bordersColor !important;
-		color: h1Title !important;
-	}
+    h3 a {
+        color: orderByCat !important;
+    }
 
-	h3 {
-		color: orderByText !important;
-	}
+    h3 a:hover {
+        color: orderByCatH !important;
+    }
 
-	h3 a {
-		color: orderByCat !important;
-	}
+    /* Index page numbers ~ Starts*/
+    .page-container {
+        background-color: bkgColor !important;
+        border-top: 1px solid bordersColor !important;
+        border-bottom: 1px solid bordersColor !important;
+    }
 
-	h3 a:hover {
-	  color: orderByCatH !important;
-	}
+    .page-container span {
+        border-left: 1px solid bordersColor !important;
+        background-color: bkgColor !important;
+        color: indexNumber !important;
+    }
 
-	/* Index page numbers ~ Starts*/
-	.page-container {
-		background-color: bkgColor !important;
-		border-top: 1px solid bordersColor !important;
-		border-bottom: 1px solid bordersColor !important;
-	}
+    .page-container a {
+        color: nextIndexNumber !important;
+        border-left: 1px solid bkgColor !important;
+    }
 
-	.page-container span {
-		border-left: 1px solid bordersColor !important;
-		background-color: bkgColor !important;
-		color: indexNumber !important;
-	}
+    .page-container a:hover {
+        color: nextIndexNumberH !important;
+        background-color: nextIndexNumberBH !important;
+    }
 
-	.page-container a {
-		color: nextIndexNumber !important;
-		border-left: 1px solid bkgColor !important;
-	}
+    .page-container li:last-child a {
+        border-right: 1px solid bkgColor !important;
+    }
 
-	.page-container a:hover {
-		color: nextIndexNumberH !important;
-		background-color: nextIndexNumberBH !important;
-	}
+    .page-container li:last-child span {
+        border-right: 1px solid bkgColor !important;
+    }
+    /* Index page numbers ~ Ends*/
+    	
+    /* Thumbnail borders ~ Starts*/
+    .thumbnail-div {
+        border: 1px solid bordersColor !important;
+    }
+    /* Thumbnail borders ~ Ends*/
+    	
+    /* Main content ~ Ends*/
+    	
+    /* Footer ~ Starts*/
+    .bottom-content {
+        background-color: bkgColor !important;
+        border-top: 1px solid bordersColor !important;
+    }
+    /* Footer ~ Ends*/
+    	
+    if pureBlack {
+        body
+        .container 
+        .search-input 
+        #search-suggestions li 
+        .sidebar
+        .content
+        .content h1 
+        .page-container 
+        .page-container span 
+        .search-input #query-input 
+        .bottom-content 
+        {
+            background-color: pureBlackColor !important;
+        }
 
-	.page-container li:last-child a {
-		border-right: 1px solid bkgColor !important;
-	}
+        .container 
+        {
+            border-left: 1px solid pureBlackBordersColor !important;
+            border-right: 1px solid pureBlackBordersColor !important;
+            border-bottom: 1px solid pureBlackBordersColor !important;
+            -moz-box-shadow: 0 0 10px pureBlackBordersColor !important;
+            -webkit-box-shadow: 0 0 10px pureBlackBordersColor !important;
+            box-shadow: 0 0 10px pureBlackBordersColor !important;
+        }
 
-	.page-container li:last-child span {
-		border-right: 1px solid bkgColor !important;
-	}
-	/* Index page numbers ~ Ends*/
+        .navbar {
+            border-bottom: 1px solid pureBlackBordersColor !important;
+        }
+        
+        #search-button {
+            border: 1px solid pureBlackBordersColor !important;
+        }
+    
+        .sidebar {
+            border-right: 1px solid pureBlackBordersColor !important;
+            border-bottom: 1px solid pureBlackBordersColor !important;
+        }
+        
+        h1
+        .page-container
+        {
+            border-top: 1px solid pureBlackBordersColor !important;
+            border-bottom: 1px solid pureBlackBordersColor !important;
+        }
+        
+        .page-container span
+        .page-container a
+        {
+            border-left: 1px solid pureBlackBordersColor !important;
+        }
+        
+        .page-container li:last-child a
+        .page-container li:last-child span
+        { border-right: 1px solid pureBlackBordersColor !important; }
+        
+        .thumbnail-div
+        { border: 1px solid pureBlackBordersColor !important; }
+        
+        .bottom-content
+        { border-top: 1px solid pureBlackBordersColor !important; }
 
+        if bannerDisable {
+            .navbar {
+                background-image: none !important;
+                background-color: pureBlackColor !important;
+            }
+        }
+    }
 
-	/* Thumbnail borders ~ Starts*/
-	.thumbnail-div {
-		border: 1px solid bordersColor !important;
-	}
-	/* Thumbnail borders ~ Ends*/
-
-	/* Main content ~ Ends*/
-
-
-	/* Footer ~ Starts*/
-	.bottom-content {
-		background-color: bkgColor !important;
-		border-top: 1px solid bordersColor !important;
-	}
-	/* Footer ~ Ends*/
-
-	/*
+    /*
 	Made with love by Knighto00 <3
 	I hope you like it! :D
 	Enjoy!
