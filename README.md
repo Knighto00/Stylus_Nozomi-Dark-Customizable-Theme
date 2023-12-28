@@ -1,5 +1,5 @@
 ## Nozomi-Dark-Customizable-Theme ![](https://img.shields.io/badge/License-GPLv3-blue.svg)
-A modest dark/customizable theme for nozomi.la website.
+A modest dark/customizable theme for nozomi.la website.  
 You are able to set the colors you like the most. Option to turn on/off pure black/OLED mode included.
 
 ![](https://raw.githubusercontent.com/Knighto00/Stylus_Nozomi-Dark-Customizable-Theme/main/img/output-onlinetools.png)
